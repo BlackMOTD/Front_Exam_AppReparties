@@ -1,0 +1,81 @@
+body {
+    background-color: #FFD700; /* Couleur jaune Carambar */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+}
+
+#text {
+    margin-top: 20px;
+    display: none; /* Le texte est caché au départ */
+}
+
+button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44728; /* Couleur du bouton */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF4500; /* Couleur du bouton au survol */
+}
+
+#carambar-section {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carambar-image {
+    width: 300px; /* Ajustez cette valeur pour augmenter ou réduire la taille */
+    height: auto;
+    position: relative;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#countdown {
+    font-size: 20px; /* Taille du texte du compte à rebours */
+    position: absolute;
+    right: 10%;
+    top: 12%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Animation explosion */
+.explosion {
+    animation: explode 0.5s forwards;
+}
+
+@keyframes explode {
+    15% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
