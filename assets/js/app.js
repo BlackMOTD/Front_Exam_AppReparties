@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch('https://back-exam-appreparties.onrender.com/api/v1/blague');
             const data = await response.json();
-            const randomIndex = Math.floor(Math.random() * data.length);
-            const randomJoke = data[randomIndex];
+            const randomIndex = Math.floor(Math.random() * data.result.length);
+            const randomJoke = data.result[randomIndex];
 
             // Afficher la blague
             contentDiv.innerHTML = `<p><strong>Blague :</strong> ${randomJoke.blague}</p>`;
