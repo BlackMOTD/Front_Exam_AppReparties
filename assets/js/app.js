@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchAndDisplayJoke() {
         try {
-            const response = await fetch('../data.json');
+            const response = await fetch('./../data.json');
             const data = await response.json();
             const randomIndex = Math.floor(Math.random() * data.length);
             const randomJoke = data[randomIndex];
